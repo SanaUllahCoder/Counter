@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter Example</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  #counter {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Counter</h1>
+  <p id="counter">0</p>
+  <button onclick="incrementCounter()">Increment</button>
+  <button onclick="decrementCounter()">Decrement</button>
+  <button onclick="resetCounter()">Reset</button>
+</div>
+
+<script>
+  // Initialize counter variable
+  let counterValue = 0;
+
+  // Function to increment the counter
+  function incrementCounter() {
+    counterValue++;
+    updateCounter();
+  }
+
+  // Function to decrement the counter
+  function decrementCounter() {
+    counterValue--;
+    updateCounter();
+  }
+
+  // Function to reset the counter
+  function resetCounter() {
+    counterValue = 0;
+    updateCounter();
+  }
+
+  // Function to update the counter value displayed on the page
+  function updateCounter() {
+    document.getElementById('counter').innerText = counterValue;
+  }
+</script>
+
+</body>
+</html>
